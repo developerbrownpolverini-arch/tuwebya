@@ -1,0 +1,53 @@
+# tuwebya.ar
+
+> Diseño de landing pages profesionales para negocios y profesionales independientes en Argentina. Web lista en 48hs con hosting gratis por 2 años.
+
+tuwebya.ar es una agencia especializada en webs express para rubros específicos. No usamos constructores genéricos: cada landing page está optimizada para el perfil de cliente de ese rubro. Precio único, sin sorpresas: ARS $499.999 con hosting gratis por 2 años incluido.
+
+## Servicios por rubro
+
+- [Web para psicólogos y terapeutas](https://tuwebya.ar/psicologos/): Landing page para psicólogos con formulario de consulta y botón WhatsApp.
+- [Web para nutricionistas](https://tuwebya.ar/nutricionistas/): Página profesional para nutricionistas con agenda y CTA directo.
+- [Web para peluquerías y barberías](https://tuwebya.ar/peluquerias/): Web con galería de trabajos y sistema de turnos por WhatsApp.
+- [Web para fotógrafos](https://tuwebya.ar/fotografos/): Portafolio fotográfico profesional con galería y contacto directo.
+- [Web para electricistas y plomeros](https://tuwebya.ar/electricistas/): Página de servicios para electricistas con CTA urgente.
+- [Web para talleres mecánicos](https://tuwebya.ar/talleres-mecanicos/): Landing para talleres con servicios, ubicación y WhatsApp.
+- [Web para profesores particulares](https://tuwebya.ar/profesores-particulares/): Perfil profesional para docentes con materias y contacto.
+- [Web para veterinarias](https://tuwebya.ar/veterinarias/): Web para veterinarias con turnos online y servicios.
+- [Web para estudios contables](https://tuwebya.ar/estudios-contables/): Página profesional para contadores con servicios y consulta.
+- [Web para servicios de limpieza empresarial](https://tuwebya.ar/limpieza-empresas/): Landing para empresas de limpieza con contacto B2B.
+
+## Páginas por ciudad
+
+Cada rubro tiene variantes optimizadas para las principales ciudades de Argentina:
+
+- Buenos Aires: /psicologos/buenos-aires/, /peluquerias/buenos-aires/, /electricistas/buenos-aires/ (y todos los rubros)
+- Córdoba: /psicologos/cordoba/, /peluquerias/cordoba/, /electricistas/cordoba/ (y todos los rubros)
+- Rosario: /psicologos/rosario/, /peluquerias/rosario/, /electricistas/rosario/ (y todos los rubros)
+- Mendoza: /psicologos/mendoza/, /peluquerias/mendoza/, /electricistas/mendoza/ (y todos los rubros)
+- La Plata: /psicologos/la-plata/, /peluquerias/la-plata/, /electricistas/la-plata/ (y todos los rubros)
+- Mar del Plata: /psicologos/mar-del-plata/, /peluquerias/mar-del-plata/, /electricistas/mar-del-plata/ (y todos los rubros)
+- Santa Clara del Mar: /psicologos/santa-clara-del-mar/, /peluquerias/santa-clara-del-mar/ (y todos los rubros)
+
+## Información general
+
+- [Quiénes somos](https://tuwebya.ar/quienes-somos/): Equipo y trayectoria de tuwebya.ar
+- [Todos los servicios](https://tuwebya.ar/servicios/): Catálogo completo de webs por rubro
+- Contacto: WhatsApp +54 9 223 348-5788
+
+## Preguntas frecuentes
+
+**¿Cuánto tarda en estar lista la web?**
+El primer borrador se entrega en menos de 24hs. La web queda en producción en 48hs una vez aprobado el diseño.
+
+**¿Qué incluye el precio?**
+Diseño, desarrollo, hosting por 2 años y configuración de dominio propio (.com o .com.ar). Sin costos ocultos.
+
+**¿Puedo modificar la web después?**
+Sí. Incluimos ajustes menores post-entrega. Para cambios mayores existe un plan de mantenimiento.
+
+**¿Para qué rubros hacen webs?**
+Psicólogos, nutricionistas, peluquerías, fotógrafos, electricistas, talleres mecánicos, profesores particulares, veterinarias, estudios contables y empresas de limpieza. También trabajamos rubros no listados.
+
+**¿Trabajan en toda Argentina?**
+Sí. Trabajamos en forma remota con clientes de todo el país. Presencia especial en Buenos Aires, Córdoba, Rosario, Mendoza, La Plata, Mar del Plata y Santa Clara del Mar.

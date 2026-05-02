@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Raíz -->
+  <url>
+    <loc>https://tuwebya.ar/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Hub de servicios -->
+  <url>
+    <loc>https://tuwebya.ar/servicios/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Quiénes somos -->
+  <url>
+    <loc>https://tuwebya.ar/quienes-somos/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Nichos base (prioridad 0.8) -->
+  <url>
+    <loc>https://tuwebya.ar/psicologos/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tuwebya.ar/peluquerias/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tuwebya.ar/electricistas/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tuwebya.ar/profesores-particulares/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tuwebya.ar/veterinarias/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tuwebya.ar/nutricionistas/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tuwebya.ar/fotografos/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tuwebya.ar/limpieza-empresas/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tuwebya.ar/talleres-mecanicos/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tuwebya.ar/estudios-contables/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Variantes geo: psicologos (prioridad 0.6) -->
+  <url><loc>https://tuwebya.ar/psicologos/buenos-aires/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/psicologos/cordoba/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/psicologos/rosario/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/psicologos/mendoza/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/psicologos/la-plata/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/psicologos/mar-del-plata/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/psicologos/santa-clara-del-mar/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Variantes geo: peluquerias -->
+  <url><loc>https://tuwebya.ar/peluquerias/buenos-aires/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/peluquerias/cordoba/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/peluquerias/rosario/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/peluquerias/mendoza/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/peluquerias/la-plata/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/peluquerias/mar-del-plata/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/peluquerias/santa-clara-del-mar/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Variantes geo: electricistas -->
+  <url><loc>https://tuwebya.ar/electricistas/buenos-aires/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/electricistas/cordoba/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/electricistas/rosario/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/electricistas/mendoza/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/electricistas/la-plata/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/electricistas/mar-del-plata/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/electricistas/santa-clara-del-mar/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Variantes geo: profesores-particulares -->
+  <url><loc>https://tuwebya.ar/profesores-particulares/buenos-aires/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/profesores-particulares/cordoba/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/profesores-particulares/rosario/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/profesores-particulares/mendoza/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/profesores-particulares/la-plata/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/profesores-particulares/mar-del-plata/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/profesores-particulares/santa-clara-del-mar/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Variantes geo: veterinarias -->
+  <url><loc>https://tuwebya.ar/veterinarias/buenos-aires/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/veterinarias/cordoba/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/veterinarias/rosario/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/veterinarias/mendoza/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/veterinarias/la-plata/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/veterinarias/mar-del-plata/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/veterinarias/santa-clara-del-mar/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Variantes geo: nutricionistas -->
+  <url><loc>https://tuwebya.ar/nutricionistas/buenos-aires/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/nutricionistas/cordoba/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/nutricionistas/rosario/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/nutricionistas/mendoza/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/nutricionistas/la-plata/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/nutricionistas/mar-del-plata/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/nutricionistas/santa-clara-del-mar/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Variantes geo: fotografos -->
+  <url><loc>https://tuwebya.ar/fotografos/buenos-aires/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/fotografos/cordoba/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/fotografos/rosario/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/fotografos/mendoza/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/fotografos/la-plata/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/fotografos/mar-del-plata/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/fotografos/santa-clara-del-mar/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Variantes geo: limpieza-empresas -->
+  <url><loc>https://tuwebya.ar/limpieza-empresas/buenos-aires/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/limpieza-empresas/cordoba/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/limpieza-empresas/rosario/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/limpieza-empresas/mendoza/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/limpieza-empresas/la-plata/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/limpieza-empresas/mar-del-plata/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/limpieza-empresas/santa-clara-del-mar/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Variantes geo: talleres-mecanicos -->
+  <url><loc>https://tuwebya.ar/talleres-mecanicos/buenos-aires/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/talleres-mecanicos/cordoba/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/talleres-mecanicos/rosario/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/talleres-mecanicos/mendoza/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/talleres-mecanicos/la-plata/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/talleres-mecanicos/mar-del-plata/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/talleres-mecanicos/santa-clara-del-mar/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Variantes geo: estudios-contables -->
+  <url><loc>https://tuwebya.ar/estudios-contables/buenos-aires/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/estudios-contables/cordoba/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/estudios-contables/rosario/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/estudios-contables/mendoza/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/estudios-contables/la-plata/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/estudios-contables/mar-del-plata/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tuwebya.ar/estudios-contables/santa-clara-del-mar/</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+</urlset>
