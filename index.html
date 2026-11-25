@@ -176,6 +176,12 @@
         .icon-box{width:56px;height:56px;background:#dbeafe;color:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-size:1.5rem;font-weight:800;border:4px solid #f0f7ff}
         
         .portfolio-grid{grid-template-columns:repeat(auto-fit, minmax(300px, 1fr))}
+        .nav-new{display:inline-flex;align-items:center;gap:.4rem}
+        .nav-new em{font-style:normal;font-size:.625rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;background:#fde047;color:#1f2937;padding:.1rem .45rem;border-radius:9999px}
+        .promo-tv{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;justify-content:space-between;padding:1.25rem 1.75rem;border-radius:1.25rem;background:linear-gradient(120deg,#1e3a8a,#2563eb);color:#fff;text-decoration:none}
+        .promo-tv b{font-size:1.125rem}.promo-tv span.sub{display:block;font-size:.9rem;opacity:.9}
+        .promo-tv .go{background:#fff;color:#1d4ed8;font-weight:700;padding:.6rem 1.25rem;border-radius:.75rem;white-space:nowrap}
+        .promo-tv:hover .go{background:#fde047;color:#1f2937}
         .portfolio-item{border-radius:1.25rem;overflow:hidden;position:relative;aspect-ratio:16/11;background:#f3f4f6}
         .portfolio-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease}
         .portfolio-item:hover img{transform:scale(1.05)}
@@ -219,6 +225,7 @@
                 <a href="#proceso" class="nav-link">Proceso</a>
                 <a href="#beneficios" class="nav-link">Beneficios</a>
                 <a href="#portfolio" class="nav-link">Trabajos</a>
+                <a href="./enpantalla/" class="nav-link nav-new">Cartelería TV <em>Nuevo</em></a>
             </nav>
 
             <div class="header-cta">
@@ -243,6 +250,7 @@
         <a href="#proceso" class="nav-link">Proceso</a>
         <a href="#beneficios" class="nav-link">Beneficios</a>
         <a href="#portfolio" class="nav-link">Trabajos</a>
+        <a href="./enpantalla/" class="nav-link nav-new">Cartelería TV <em>Nuevo</em></a>
         <a href="https://wa.me/5492233485788" class="btn-wa" style="margin-top: 1rem; width: 100%;">
             <span>WhatsApp</span>
         </a>
@@ -478,7 +486,30 @@
                             </div>
                         </div>
                     </a>
+                    <!-- Item 5 -->
+                    <a href="https://salvaescalera.com.ar/" target="_blank" rel="noopener" class="portfolio-item group shadow-lg">
+                        <img src="./img/salvaescalera.png" alt="Salvaescaleras Fernando" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div>
+                                <h3 class="font-bold text-2xl text-white">Salvaescaleras Fernando</h3>
+                                <p class="text-sm text-gray-300">Landing + SEO para servicios locales</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
+            </div>
+        </section>
+
+        <!-- Nuevo servicio: enpantalla (solo un llamado, la landing propia explica todo) -->
+        <section style="padding:0 0 4rem">
+            <div class="container">
+                <a href="./enpantalla/" class="promo-tv">
+                    <div>
+                        <b>📺 ¿Tenés un local, clínica u hotel con tele?</b>
+                        <span class="sub">Armá la cartelería digital de tu negocio en minutos, con plantillas listas para tu rubro.</span>
+                    </div>
+                    <span class="go">Conocé enpantalla →</span>
+                </a>
             </div>
         </section>
 

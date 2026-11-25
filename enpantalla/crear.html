@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Armá tu pantalla · enpantalla</title>
 <link rel="icon" href="../favicon.svg">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&family=Bebas+Neue&family=Playfair+Display:wght@800&family=Oswald:wght@700&display=swap">
+<link rel="stylesheet" href="fonts.css">
 <style>
 :root{--bg:#f6f7fb;--card:#fff;--tx:#1f2937;--mut:#6b7280;--pri:#2563eb;--bd:#e5e7eb}
 @media (prefers-color-scheme:dark){:root{--bg:#0f172a;--card:#1e293b;--tx:#f1f5f9;--mut:#94a3b8;--bd:#334155}}
@@ -61,7 +61,9 @@ textarea{min-height:70px}
       slides: r.slides.map(function (s) { return Object.assign({ img: '', video: '', segundos: 8 }, s); })
     };
   }
-  function guardar() { try { localStorage.setItem(KEY, JSON.stringify(cfg)); } catch (e) {} }
+  function guardar() {
+    try { localStorage.setItem(KEY, JSON.stringify(cfg, function (k, v) { return k === 'video' && /^blob:/.test(v) ? '' : v; })); } catch (e) {}
+  }
   function cargar() {
     var q = new URLSearchParams(location.search).get('rubro');
     if (q) return estadoDe(q);
@@ -84,15 +86,15 @@ textarea{min-height:70px}
   }
   $('dots').onclick = function (e) { var i = e.target.dataset.i; if (i != null) { idx = +i; player.ir(idx); } };
 
-  // Reducir fotos antes de embeberlas: el HTML final tiene que entrar por WhatsApp.
-  function reducir(file, max) {
+  // Reducir fotos antes de embeberlas: el paquete final tiene que pesar poco.
+  function reducir(file, max, tipo) {
     return new Promise(function (ok, no) {
       var im = new Image(), u = URL.createObjectURL(file);
       im.onload = function () {
         var k = Math.min(1, max / Math.max(im.width, im.height)), c = document.createElement('canvas');
         c.width = Math.round(im.width * k); c.height = Math.round(im.height * k);
         c.getContext('2d').drawImage(im, 0, 0, c.width, c.height);
-        URL.revokeObjectURL(u); ok(c.toDataURL('image/jpeg', 0.8));
+        URL.revokeObjectURL(u); ok(c.toDataURL(tipo || 'image/jpeg', 0.8));
       };
       im.onerror = no; im.src = u;
     });
@@ -108,7 +110,7 @@ textarea{min-height:70px}
     },
     function () { // 2 estilo
       return '<h2>2. Elegí el estilo</h2><label>Colores</label><div class="sw">' + EP.PALETAS.map(function (p) {
-        return '<button title="' + p.nombre + '" data-pal="' + p.id + '" class="' + (cfg.paleta === p.id ? 'on' : '') + '" style="background:linear-gradient(135deg,' + p.primario + ' 50%,' + p.acento + ' 50%)"></button>';
+        return '<button title="' + p.nombre + '" data-pal="' + p.id + '" class="' + (cfg.paleta === p.id ? 'on' : '') + '" style="background:linear-gradient(135deg,' + p.fondo + ' 34%,' + p.primario + ' 34% 67%,' + p.acento + ' 67%);border-color:' + (cfg.paleta === p.id ? 'var(--tx)' : 'var(--bd)') + '"></button>';
       }).join('') + '</div><label>Letra</label><select id="fuente">' + opts(EP.FUENTES, cfg.fuente) + '</select>' +
         '<label>Pantalla</label><select id="ori"><option value="h"' + (cfg.orientacion === 'h' ? ' selected' : '') + '>Horizontal (tele / monitor)</option><option value="v"' + (cfg.orientacion === 'v' ? ' selected' : '') + '>Vertical</option></select>' +
         '<label>Nombre del negocio</label><input id="nombre" value="' + esc(cfg.nombre) + '" placeholder="Ej: Clínica Del Sol">' +
@@ -124,16 +126,18 @@ textarea{min-height:70px}
           '<label>Título</label><input data-k="titulo" value="' + esc(s.titulo) + '">' +
           '<label>' + (s.layout === 'lista' ? 'Ítems (uno por línea: nombre|precio)' : 'Texto') + '</label><textarea data-k="texto">' + esc(s.texto) + '</textarea>' +
           (s.layout === 'lista' || s.layout === 'video' ? '' : '<div class="grid"><div><label>Precio / oferta</label><input data-k="precio" value="' + esc(s.precio) + '"></div><div><label>Etiqueta</label><input data-k="etiqueta" value="' + esc(s.etiqueta) + '" placeholder="Promo"></div></div>') +
-          (s.layout === 'video' ? '<label>Link del video (.mp4 público)</label><input data-k="video" value="' + esc(s.video) + '" placeholder="https://...mp4">' : '<label>Foto</label><input type="file" data-foto accept="image/*">') +
+          (s.layout === 'video' ? '<label>Video (.mp4, mejor si pesa menos de 50 MB)</label><input type="file" data-video accept="video/*">' + (s.videoNombre ? '<small>' + esc(s.videoNombre) + '</small>' : '') : '<label>Foto</label><input type="file" data-foto accept="image/*">') +
           '<label>Segundos en pantalla</label><input type="number" min="3" max="60" data-k="segundos" value="' + (s.segundos || 8) + '"></div>';
       }).join('') + '<button class="btn sec" id="add">+ Agregar aviso</button>';
     },
-    function () { // 4 enviar
-      return '<h2>4. Enviá tu pantalla</h2><p>Revisá la vista previa. Al enviar, te generamos un archivo <b>.html</b> con todo adentro y se abre WhatsApp para mandárnoslo.</p>' +
-        '<label>Tu nombre o el del negocio</label><input id="quien" value="' + esc(cfg.nombre) + '">' +
-        '<div class="nav"><button class="btn" id="enviar">📲 Enviar por WhatsApp</button><button class="btn sec" id="bajar">⬇ Solo descargar</button></div>' +
-        '<p class="hint">Para verlo en tu tele: abrí el archivo en el navegador de la tele o de una PC conectada y poné pantalla completa (F11). Funciona sin instalar nada.</p>' +
-        '<button class="btn sec" id="play" style="margin-top:8px">▶ Probar en pantalla completa</button>';
+    function () { // 4 descargar
+      var hayVideo = cfg.slides.some(function (s) { return s.layout === 'video' && s.video; });
+      return '<h2>4. Descargá tu pantalla</h2><p>Revisá la vista previa. Te descargamos un <b>.zip</b> con todo adentro: el archivo <b>index.html</b>, tus fotos, videos y tipografías.</p>' +
+        '<label>Nombre del negocio</label><input id="quien" value="' + esc(cfg.nombre) + '">' +
+        '<div class="nav"><button class="btn" id="bajar">⬇ Descargar mi pantalla</button><button class="btn sec" id="play">▶ Pantalla completa</button></div>' +
+        '<p class="hint" id="estado"></p>' +
+        '<p class="hint">Descomprimí el zip y abrí <b>index.html</b> en el navegador de la tele o de una PC conectada; poné pantalla completa (F11). Funciona sin internet. Si querés que la publiquemos, escribinos y te guiamos.</p>' +
+        (hayVideo ? '<p class="hint">Los videos tienen que estar en la misma carpeta que index.html (carpeta media).</p>' : '');
     }
   ];
 
@@ -162,8 +166,7 @@ textarea{min-height:70px}
       else { var j = a === 'up' ? i - 1 : i + 1; if (j >= 0 && j < s.length) { var x = s[i]; s[i] = s[j]; s[j] = x; } }
       vista();
     }
-    else if (t.id === 'enviar') enviar(true);
-    else if (t.id === 'bajar') enviar(false);
+    else if (t.id === 'bajar') descargar(t);
     else if (t.id === 'play') { $('pv').requestFullscreen && $('pv').requestFullscreen(); }
   });
 
@@ -181,25 +184,28 @@ textarea{min-height:70px}
     var t = e.target; if (!cfg) return;
     if (t.id === 'fuente') { cfg.fuente = t.value; dibujar(); }
     else if (t.id === 'ori') { cfg.orientacion = t.value; dibujar(); }
-    else if (t.id === 'logo' && t.files[0]) reducir(t.files[0], 300).then(function (d) { cfg.logo = d; dibujar(); });
+    else if (t.id === 'logo' && t.files[0]) reducir(t.files[0], 300, 'image/png').then(function (d) { cfg.logo = d; dibujar(); });
+    else if (t.dataset.video !== undefined && t.files[0]) {
+      var j = +t.closest('.sl').dataset.i; idx = j;
+      cfg.slides[j].video = URL.createObjectURL(t.files[0]); cfg.slides[j].videoNombre = t.files[0].name; vista();
+    }
     else if (t.dataset.foto !== undefined && t.files[0]) {
       var i = +t.closest('.sl').dataset.i; idx = i;
       reducir(t.files[0], 1600).then(function (d) { cfg.slides[i].img = d; dibujar(); });
     }
   });
 
-  function enviar(wsp) {
-    var html = EP.exportarHTML(paraPlayer());
-    var nombre = (cfg.nombre || 'pantalla').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'pantalla';
-    var file = new File([html], 'pantalla-' + nombre + '.html', { type: 'text/html' });
-    var msg = 'Hola! Armé mi pantalla en enpantalla.tuwebya.com.ar (' + (cfg.nombre || 'sin nombre') + '). Te paso el archivo para que me contacten.';
-    if (wsp && navigator.canShare && navigator.canShare({ files: [file] })) {
-      navigator.share({ files: [file], text: msg }).catch(function () {});
-      return;
-    }
-    var a = document.createElement('a');
-    a.href = URL.createObjectURL(file); a.download = file.name; a.click();
-    if (wsp) setTimeout(function () { window.open('https://wa.me/5492233485788?text=' + encodeURIComponent(msg + ' (Adjunto el archivo descargado)'), '_blank'); }, 400);
+  function descargar(btn) {
+    var nombre = (cfg.nombre || 'pantalla').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'pantalla';
+    btn.disabled = true; $('estado').textContent = 'Armando el paquete...';
+    EP.paquete(paraPlayer(), function (ruta) { return fetch(ruta).then(function (r) { if (!r.ok) throw new Error(ruta); return r.arrayBuffer(); }).then(function (b) { return new Uint8Array(b); }); })
+      .then(function (blob) {
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(blob); a.download = 'pantalla-' + nombre + '.zip'; a.click();
+        $('estado').textContent = 'Listo: ' + (blob.size / 1048576).toFixed(1) + ' MB.';
+      })
+      .catch(function () { $('estado').textContent = 'No pudimos armar el paquete. Probá de nuevo.'; })
+      .then(function () { btn.disabled = false; });
   }
 
   cfg = cargar();
