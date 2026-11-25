@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>enpantalla · Cartelería digital para tu negocio</title>
+<meta name="description" content="Armá en minutos la pantalla de tu negocio, clínica u hotel: plantillas listas con tus fotos, ofertas y precios. Sin instalar nada.">
+<link rel="icon" href="../favicon.svg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&family=Bebas+Neue&family=Playfair+Display:wght@800&family=Oswald:wght@700&display=swap">
+<style>
+:root{--bg:#fff;--tx:#1f2937;--mut:#6b7280;--pri:#2563eb;--soft:#eff6ff}
+@media (prefers-color-scheme:dark){:root{--bg:#0f172a;--tx:#f1f5f9;--mut:#94a3b8;--soft:#1e293b}}
+*{box-sizing:border-box}body{margin:0;font:17px/1.5 Poppins,system-ui,sans-serif;background:var(--bg);color:var(--tx)}
+.c{max-width:1100px;margin:auto;padding:0 20px}
+header{padding:16px 0}header .c{display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;font-size:22px}.logo span{color:var(--pri)}
+.hero{padding:40px 0 60px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+@media(max-width:800px){.hero{grid-template-columns:1fr}}
+h1{font-size:clamp(32px,5vw,52px);line-height:1.08;margin:0 0 16px;letter-spacing:-.02em}
+.btn{display:inline-block;background:var(--pri);color:#fff;padding:14px 26px;border-radius:12px;font-weight:800;text-decoration:none}
+.tv{aspect-ratio:16/9;position:relative;background:#000;border:10px solid #111;border-radius:14px;overflow:hidden;box-shadow:0 20px 40px #0004}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:30px 0}
+@media(max-width:800px){.steps{grid-template-columns:1fr}}
+.steps div,.faq div{background:var(--soft);border-radius:16px;padding:20px}
+.steps b{display:block;font-size:30px}
+h2{font-size:30px;margin:50px 0 6px}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:20px}
+.gal a{text-decoration:none;color:inherit}.gal .tv{border-width:6px;margin-bottom:8px}
+.faq{display:grid;gap:12px;margin:20px 0 60px}
+footer{padding:30px 0;color:var(--mut);text-align:center;font-size:14px}
+</style>
+</head>
+<body>
+<header><div class="c"><div class="logo">📺 en<span>pantalla</span></div><a href="https://tuwebya.ar" style="color:var(--mut);text-decoration:none">por tuwebya</a></div></header>
+<main class="c">
+  <section class="hero">
+    <div>
+      <h1>La pantalla de tu negocio, lista en minutos.</h1>
+      <p style="color:var(--mut)">Elegí una plantilla, cargá tus fotos, ofertas y precios, y mostralos en la tele de tu local, clínica u hotel. Sin instalar nada.</p>
+      <a class="btn" href="crear.html">Armar mi pantalla</a>
+    </div>
+    <div class="tv" id="hero"></div>
+  </section>
+
+  <section class="steps">
+    <div><b>1</b>Elegí tu rubro y estilo</div>
+    <div><b>2</b>Cargá tus fotos, ofertas y precios</div>
+    <div><b>3</b>Tocá enviar: nos llega por WhatsApp y te contactamos</div>
+  </section>
+
+  <h2>Plantillas para tu rubro</h2>
+  <p style="color:var(--mut);margin:0">Tocá una para personalizarla.</p>
+  <div class="gal" id="gal"></div>
+
+  <h2>Preguntas frecuentes</h2>
+  <div class="faq">
+    <div><b>¿Qué necesito?</b><br>Una tele o monitor con navegador (o una PC / Chromecast / TV box conectado) y conexión a internet.</div>
+    <div><b>¿Puedo poner videos?</b><br>Sí: fotos y videos .mp4 por link. Te ayudamos a dejarlo andando.</div>
+    <div><b>¿Cuánto sale?</b><br>Escribinos por WhatsApp y te pasamos las opciones.</div>
+  </div>
+</main>
+<footer>© tuwebya · enpantalla</footer>
+<script src="ep.js"></script>
+<script>
+// Demo viva: los mismos reproductores del editor, con datos de ejemplo.
+function cfgDe(r) {
+  return { nombre: 'Tu negocio', pie: 'tu contacto acá', logo: '', orientacion: 'h', p: EP.porId(EP.PALETAS, r.paleta), f: EP.porId(EP.FUENTES, r.fuente),
+    slides: r.slides.map(function (s) { return Object.assign({ img: '', video: '', segundos: 4 }, s); }) };
+}
+EP.player(cfgDe(EP.RUBROS[2]), document.getElementById('hero'));
+document.getElementById('gal').innerHTML = EP.RUBROS.map(function (r) {
+  return '<a href="crear.html?rubro=' + r.id + '"><div class="tv" id="g-' + r.id + '"></div><b>' + r.icono + ' ' + r.nombre + '</b></a>';
+}).join('');
+EP.RUBROS.forEach(function (r) { EP.player(cfgDe(r), document.getElementById('g-' + r.id)); });
+</script>
+</body>
+</html>
